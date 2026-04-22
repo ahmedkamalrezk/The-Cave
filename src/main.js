@@ -119,10 +119,12 @@ async function typeWriter(commands) {
 // 3. OS Detection & CTA
 function detectOS() {
   const ua = navigator.userAgent;
+  // Mobile first to avoid misdetection (iOS often includes 'Macintosh')
+  if (ua.includes('iPhone') || ua.includes('iPad') || (ua.includes('Mac') && navigator.maxTouchPoints > 1)) return 'ios';
+  if (ua.includes('Android')) return 'android';
+  
   if (ua.includes('Windows')) return 'windows';
   if (ua.includes('Mac'))     return 'macos';
-  if (ua.includes('iPhone') || ua.includes('iPad')) return 'ios';
-  if (ua.includes('Android')) return 'android';
   if (ua.includes('Linux'))   return 'linux';
   return 'unknown';
 }

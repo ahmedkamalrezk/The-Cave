@@ -35,7 +35,7 @@
             <!-- Hero -->
             <section id="hero" class="min-h-screen flex flex-col items-center justify-center pt-20 px-6">
                 <div class="max-w-4xl w-full text-center space-y-12">
-                    <div class="flex justify-center">
+                    <div class="flex justify-center overflow-hidden max-h-[40vh]">
                         <pre id="ascii-logo" class="logo-container pointer-events-none select-none text-success"></pre>
                     </div>
 
@@ -191,8 +191,8 @@
                     <p class="text-white/20 text-[10px] uppercase font-bold tracking-widest">© 2026 Core Protocols Inc. | Status: Optimal</p>
                 </div>
                 <div class="flex gap-12 text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">
-                    <a href="/privacy.html" class="hover:text-success transition-colors">Privacy</a>
-                    <a href="/logs.html" class="hover:text-success transition-colors">Logs</a>
+                    <a href="./privacy.html" class="hover:text-success transition-colors">Privacy</a>
+                    <a href="./logs.html" class="hover:text-success transition-colors">Logs</a>
                 </div>
             </div>
         </footer>
