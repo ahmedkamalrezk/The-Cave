@@ -94,7 +94,8 @@ async function typeWriter(commands) {
     await new Promise(r => setTimeout(r, cmd.delay));
     
     const line = document.createElement('div');
-    line.className = cmd.response ? 'text-white/40 mb-2' : 'text-success mb-1';
+    const typeClass = cmd.response ? 'text-white/40 mb-2' : 'text-success mb-1';
+    line.className = `terminal-line ${typeClass}`;
     terminal.appendChild(line);
 
     if (cmd.response) {
@@ -106,7 +107,11 @@ async function typeWriter(commands) {
       }
     }
     
-    terminal.scrollTop = terminal.scrollHeight;
+    // Smoothly scroll to keep the newest text in view
+    terminal.scrollTo({
+      top: terminal.scrollHeight,
+      behavior: 'smooth'
+    });
   }
 
   // Loop after delay

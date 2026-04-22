@@ -30,8 +30,11 @@
 
   section#hero {
     overflow: hidden;
+    /* Ensure the hero section doesn't jump when content grows */
+    contain: layout style;
   }
 }
+
 
 /* ASCII Logo Styling */
 .logo-container {
@@ -45,7 +48,9 @@
   line-height: 1.1;
   white-space: pre;
   overflow: hidden; /* Prevent local scrollbars */
+  will-change: transform, opacity;
 }
+
 
 .logo-line {
   opacity: 0;
@@ -84,6 +89,34 @@
 .glow-accent {
   text-shadow: 0 0 10px rgba(230, 230, 250, 0.5);
 }
+
+/* Terminal Line Animation */
+.terminal-line {
+  opacity: 0;
+  transform: translateY(4px);
+  animation: line-reveal 0.3s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+
+@keyframes line-reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.terminal-scroll-container {
+  scroll-behavior: smooth;
+  /* Prevent layout shifts from scrollbar appearing/disappearing */
+  scrollbar-gutter: stable;
+  /* Isolate terminal activity from the rest of the page */
+  contain: paint content;
+  overflow-anchor: none;
+}
+
+
+
 
 /* Custom Utilities */
 .feature-card {
