@@ -94,7 +94,7 @@ async function typeWriter(commands) {
     await new Promise(r => setTimeout(r, cmd.delay));
     
     const line = document.createElement('div');
-    const typeClass = cmd.response ? 'text-white/40 mb-2' : 'text-success mb-1';
+    const typeClass = cmd.response ? 'text-white/40 mb-1.5' : 'text-success mb-1';
     line.className = `terminal-line ${typeClass}`;
     terminal.appendChild(line);
 

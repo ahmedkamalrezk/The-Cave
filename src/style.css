@@ -96,7 +96,9 @@
   transform: translateY(4px);
   animation: line-reveal 0.3s ease-out forwards;
   will-change: transform, opacity;
+  line-height: 1.4; /* Controlled height */
 }
+
 
 
 @keyframes line-reveal {
