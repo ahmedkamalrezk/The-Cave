@@ -35,7 +35,11 @@
 
 /* ASCII Logo Styling */
 .logo-container {
-  font-size: clamp(6px, 1.8vw, 14px);
+  font-size: clamp(8px, 2.5vw, 13px);
+  /* Use viewport logic sparingly to avoid jank on mobile */
+  @media (max-width: 640px) {
+    font-size: 8px;
+  }
   text-shadow: 0 0 6px #00FF00, 0 0 18px rgba(0, 255, 0, 0.4);
   letter-spacing: 0;
   line-height: 1.1;
@@ -68,7 +72,8 @@
 
 @keyframes crt-flicker-anim {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+  33% { opacity: 0.8; }
+  66% { opacity: 0.9; }
 }
 
 /* Glow Effects */
