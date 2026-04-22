@@ -55,7 +55,7 @@
                             <div class="w-2 h-2 rounded-full bg-green-500/30"></div>
                             <span class="text-[8px] text-white/20 uppercase ml-2">thecave.sh</span>
                         </div>
-                        <div class="p-6 text-left min-h-[160px] font-mono text-sm sm:text-base">
+                        <div class="p-6 text-left h-[200px] overflow-y-auto scrollbar-none font-mono text-sm sm:text-base">
                             <div id="terminal-content" class="text-success glow-text"></div>
                         </div>
                     </div>

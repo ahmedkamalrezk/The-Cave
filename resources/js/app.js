@@ -276,5 +276,5 @@ document.addEventListener('DOMContentLoaded', () => {
   typeWriter(TERMINAL_COMMANDS);
   updateCTA();
   initTabs();
-  // initScrollAnimations(); // Disabled temporarily to investigate mobile shaking
+  initScrollAnimations();
 });
